@@ -24,12 +24,15 @@ And feel free to interupt it using `ctrl + c`.
 
 ## Structure of Inference workflow
 
+```mermaid
 sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
+    TG Client ->>+ TG Server: Send `/prediect` request by reply to some image.
+    TG Server ->>+ Self-hosting Bot: Got a `/prediect` request.
+    Self-hosting Bot ->>+ TG Server: Request image that `/predict` command replied to.
+    TG Server ->>+ Self-hosting Bot: Send request image.
+    Self-hosting Bot ->>+ Inference Module: Send inference request with tranformed image.
+    Inference Module ->>+ Self-hosting Bot: Return inference result.  
+    Self-hosting Bot -->>+ TG Server: Return inference result with message and photo.  
+    TG Server -->>+ TG Client: Return inference result with message and photo.  
+    
+```
