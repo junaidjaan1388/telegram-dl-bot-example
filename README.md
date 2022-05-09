@@ -22,3 +22,8 @@ python3 main.py
 ```
 And feel free to interupt it using `ctrl + c`.
 
+## Structure of Inference workflow
+
+```sequence
+TG Client -> TG Server: Send `/predict` commant. 
+```
