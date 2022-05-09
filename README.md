@@ -6,8 +6,8 @@ You can implement this bot with your bot token and do inference using mnist data
 
 ## Prefilght check
 
-- [] Get the Bot token from telegram bot father[link](https://t.me/botfather).
-- [] Configure you token by changing the setting in `config.ini`.
+- [ ] Get the Bot token from telegram bot father[link](https://t.me/botfather).
+- [ ] Configure you token by changing the setting in `config.ini`.
 
 ## Installation
 Run this code before you install the dependencies using following command:
