@@ -1,0 +1,6 @@
+tensorflow==2.8.0
+tensorflow-datasets==4.5.2
+numpy==1.22.3
+wget==3.2
+python-telegram-bot==13.11
+
